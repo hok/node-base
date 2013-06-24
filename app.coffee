@@ -42,6 +42,7 @@ require('./apps/helpers')(app)
 require('./middleware/upgrade')(app)
 
 # routes
+require('./routes/site')(app)
 require('./apps/authentication/routes')(app)
 
 server = app.listen(app.settings.port)
