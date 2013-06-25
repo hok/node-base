@@ -1,8 +1,8 @@
 {
-  "name": "node-base",
+  "name": "node_base",
   "version": "0.0.1",
   "private": true,
-  "main": "app.coffee"
+  "main": "app.coffee",
   "scripts": {
     "test": "./bin/test"
   },
@@ -16,7 +16,6 @@
     "connect-flash": "~0.1.1",
     "express-namespace": "~0.1.1",
     "connect-assets": "~2.4.3",
-    // "socket.io": "~0.9.16",
     "underscore": "~1.4.4"
   },
   "devDependencies": {

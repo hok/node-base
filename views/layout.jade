@@ -2,23 +2,23 @@ doctype 5
 html
   head
     title= 'Base Node app'
-    link(rel='stylesheet', href="/stylesheets/simplegrid.css")
+    != css('screen')
+    != css('gumby')
+    != css('print')
+    != css('ie')
     link(rel='stylesheet', href="/stylesheets/#{stylesheet}.css")
   body
-    div.grid.grid-pad
-      #header
+    .row
+      #header.twelve.columns
         h1= title
 
-      - var flashTypes = ['info', 'error']
-      each flashType in flashTypes
-        if flash[flashType]
-          p.flash(class=flashType)
-            = flash[flashType]
+    - var flashTypes = ['info', 'error']
+    each flashType in flashTypes
+      if flash[flashType]
+        p.flash(class=flashType)
+          = flash[flashType]
 
-      div.col-3-12
-        | text
-
-      div.col-9-12
-        block content
+    .row
+      block content
 
     != js('application')
